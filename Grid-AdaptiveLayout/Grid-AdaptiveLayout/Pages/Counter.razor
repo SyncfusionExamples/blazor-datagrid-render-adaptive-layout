@@ -4,18 +4,21 @@
 @using Syncfusion.Blazor.Grids
 
 <div style="position:relative; min-height: 500px;">
-    <SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint"></SfMediaQuery>
+    <SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint"/>
     @if (activeBreakpoint == "Small")
     {
-        isAdaptive = true;
+        rowDirection = RowDirection.Vertical;
     }
     else
     {
-        isAdaptive = false;
+        rowDirection = RowDirection.Horizontal;
     }
-    <SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true" EnableAdaptiveUI="@isAdaptive" RowRenderingMode="RowDirection.Vertical" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" AllowPaging="true">
-        <GridFilterSettings Type="@FilterType.Excel"></GridFilterSettings>
-        <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
+    <SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true"
+            EnableAdaptiveUI="true" AdaptiveUIMode="AdaptiveMode.Mobile" RowRenderingMode="@rowDirection"
+            Height="100%" Width="100%" AllowPaging="true"
+            Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })">
+        <GridFilterSettings Type="@FilterType.Excel"/>
+        <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"/>
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80" ValidationRules="@(new ValidationRules{ Required= true })"></GridColumn>
             <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
@@ -28,7 +31,7 @@
 @code {
     public List<Order>? Orders { get; set; }
     private string? activeBreakpoint { get; set; }
-    private bool isAdaptive { get; set; }
+    private RowDirection rowDirection{ get; set; }
 
     protected override void OnInitialized()
     {
