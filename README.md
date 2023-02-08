@@ -1,2 +1,14 @@
-# blazor-datagrid-render-adaptive-layout
-This sample is to demonstrate on how to ender grid in adaptive layout
+# Blazor DataGrid -Render Adaptive Layout
+
+This sample explains about how to render the Blazor DataGrid in adaptive layout.
+
+## Prerequisites
+
+* Visual Studio 2022
+
+## How to run the project
+
+* Checkout this project to a location in your disk.
+* Open the solution file using the Visual Studio 2022.
+* Restore the NuGet packages by rebuilding the solution.
+* Run the project.
