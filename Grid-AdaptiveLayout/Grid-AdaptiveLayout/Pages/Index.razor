@@ -2,6 +2,8 @@
 
 @using Syncfusion.Blazor.Grids
 
+<p>DataGrid Adaptive UI layout using AdaptiveUIMode property</p>
+
 <div style="position:relative; min-height: 500px;">
     <SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true" EnableAdaptiveUI="true"
         AdaptiveUIMode="AdaptiveMode.Mobile" Height="100%" Width="100%" AllowPaging="true"
@@ -18,7 +20,7 @@
 </div>
 
 @code{
-    public List<Order> Orders { get; set; }
+    public List<Order>? Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -34,7 +36,7 @@
     public class Order
     {
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
