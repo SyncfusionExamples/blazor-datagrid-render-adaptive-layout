@@ -1,5 +1,5 @@
 
-# blazor-datagrid-render-adaptive-layout
+# Blazor Datagrid Render Adaptive Layout
 
 A quick-start project that helps you how to design the adaptive layout in Blazor DataGrid component. 
 
