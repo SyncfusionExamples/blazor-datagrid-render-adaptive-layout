@@ -1,15 +1,53 @@
-# Blazor Datagrid Render Adaptive Layout
+# Blazor DataGrid Adaptive Layout
 
-A quick-start project that helps you how to design the adaptive layout in Blazor DataGrid component. 
+A quick-start project demonstrating how to implement responsive adaptive UI patterns using the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
 
-Documentation: https://blazor.syncfusion.com/documentation/datagrid/adaptive-layout
+## Overview
 
-Online examples: https://blazor.syncfusion.com/demos/datagrid/adaptive-rendering?theme=fluent
+This sample application illustrates the Blazor DataGrid's adaptive UI capabilities, enabling your grid to render differently on mobile and desktop devices. The adaptive layout provides an intuitive user interface that adjusts to various screen sizes while maintaining full functionality including sorting, filtering, paging, and CRUD operations.
 
-## Project prerequisites
-Make sure that you have the latest versions of 'Visual Studio 2022' in your machine before starting to work on this project.
+## Features
 
-## How to run this application?
-• To run this application, you need to first clone the <code>blazor-datagrid-render-adaptive-layout</code> repository and then open it in Visual Studio 2022.
-• Register the syncfusion license key in Program.cs file, if you have any doubt check the documentation link : https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application
-• Now, simply build and run your project to view the output.
+- **Responsive Adaptive Rendering** - DataGrid automatically switches between mobile and desktop layouts based on screen size
+- **Mobile-optimized Dialog Editing** - Edit operations use touch-friendly dialogs on mobile devices instead of inline editing
+- **Excel-style Filtering** - Advanced filtering capabilities with Excel-like filter UI
+- **Data Sorting & Paging** - Sort columns and paginate through large datasets efficiently
+- **Complete CRUD Toolbar** - Add, Edit, Delete, Update, and Cancel operations with search functionality
+
+## Prerequisites
+
+* [.NET SDK 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or later
+* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or later
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+## Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout.git
+cd blazor-datagrid-render-adaptive-layout
+```
+
+### Run with Visual Studio
+
+1. Open the solution file using Visual Studio 2022 or later.
+2. Restore the NuGet packages by rebuilding the solution.
+3. Build the project to ensure there are no compilation errors.
+4. Run the project.
+
+### Run with .NET CLI
+
+```bash
+# Restore dependencies
+dotnet restore
+
+# Run the project
+dotnet run
+```
+
+## References
+
+**Documentation**: https://blazor.syncfusion.com/documentation/datagrid/adaptive-layout
+
+**Online example**: https://blazor.syncfusion.com/demos/datagrid/adaptive-rendering?theme=fluent
